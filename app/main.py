@@ -13,6 +13,7 @@ class OrderRequest(BaseModel):
     order_id: int 
     product: str 
     quantity: int
+    delivery_method: str
 
 @app.post("/orders", status_code=202) 
 async def submit_order(order: OrderRequest): 
